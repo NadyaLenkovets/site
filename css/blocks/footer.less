@@ -1,0 +1,80 @@
+// main: ../style.less
+
+
+.footer {
+   padding: 50px 0;
+   background-color: #111111;
+   color: @white;
+
+   @media @mobile {
+      padding: 30px 0 30px;
+   }
+}
+
+.footer__inner {
+   display: flex;
+   justify-content: space-between;
+
+   @media @mobile {
+      flex-wrap: wrap;
+      justify-content: space-around;
+   }
+}
+
+.footer__logo {
+   font-family: 'Russo One', sans-serif;
+   font-size: 50px;
+   letter-spacing: 3px;
+   display: inline-block;
+   margin: 20px;
+   padding: 5px;
+   position: relative;
+   z-index: 5;
+
+   & a {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+   }
+
+   &::before {
+      content: '';
+      height: 2px;
+      width: 100%;
+      background: linear-gradient(to left, #fff, #111111);
+
+      position: absolute;
+      top: 0;
+      right: 0;
+   }
+
+   &::after {
+      content: '';
+      height: 2px;
+      width: 100%;
+      background: linear-gradient(to right, #fff, #111111);
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+   }
+}
+
+.footer__social {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.footer__social-icon {
+   margin: 0 50px 0 0;
+   fill: rgba(255, 255, 255, 0.8);
+   width: 50px;
+   height: 50px;
+
+   transition: all 0.4s ease;
+
+   &:hover {
+      transform: scale(1.2);
+      fill: rgba(255, 255, 255, 1);
+   }
+}
