@@ -1,0 +1,7 @@
+.news__inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+.news__item {
+  width: 50%;
+}
